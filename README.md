@@ -2,6 +2,7 @@ CartodbUbuntu
 =============
 
 A VirtualBox CartoDB VM on Ubuntu Server 14.04 LTS
+based upon https://gist.githubusercontent.com/tomay/7779546/raw/5479e0be07e80b1cc5b4341c180d675afff5b427/cartodb+install+notes+12.04.md
 
 ### Cartodb install on Digital Ocean ubuntu 12.04 64-bit
 based on https://github.com/CartoDB/cartodb with additions as necessary
@@ -54,11 +55,13 @@ PROJ-4
 POSTGRESQL
 
     # Note: 12.04 so not using carto ppa here: sudo add-apt-repository ppa:cartodb/postgresql 
-    sudo apt-get install postgresql-9.1 postgresql-client-9.1 postgresql-contrib-9.1 postgresql-server-dev-9.1
+    ***sudo apt-get install postgresql-9.1 postgresql-client-9.1 postgresql-contrib-9.1 postgresql-server-dev-9.1
+    sudo apt-get install postgresql-9.3 postgresql-client-9.3 postgresql-contrib-9.3 postgresql-server-dev-9.3
 
 PLP-PYTHON
 
-    sudo apt-get install postgresql-plpython-9.1
+    ***sudo apt-get install postgresql-plpython-9.1
+    sudo apt-get install postgresql-plpython-9.3
 
 POST-GIS
 
