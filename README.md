@@ -109,8 +109,8 @@ ImageMagik
 Install Python dependencies
 
     sudo apt-get install python-setuptools
-    easy_install pip
-    pip install -r cartodb20/python_requirements.txt
+    sudo easy_install pip
+    pip install -r cartodb/python_requirements.txt
 
     # when python-gdal bindings fail to install using above
     sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
