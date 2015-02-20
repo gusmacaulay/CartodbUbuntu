@@ -151,6 +151,8 @@ Mapnik
 
 ### CartoDB SQL API
 
+    # nodejs-legacy fixes 'WARN This failure might be due to the use of legacy binary "node"' error
+    sudo apt-get install nodejs-legacy
     git clone git://github.com/CartoDB/CartoDB-SQL-API.git
     cd CartoDB-SQL-API
     git checkout master 
