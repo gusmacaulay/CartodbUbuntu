@@ -1,4 +1,4 @@
-CartodbUbuntu
+Cartodb Ubuntu 14.04
 =============
 
 A VirtualBox CartoDB VM on Ubuntu Server 14.04 LTS
@@ -34,6 +34,8 @@ Add Cartodb PPAs
     sudo add-apt-repository ppa:cartodb/redis
     
     apt-get update
+    
+    This will complain about missing repositories - possibly doesn't matter
 
 GDAL
 
@@ -65,17 +67,18 @@ PLP-PYTHON
 
 POST-GIS
 
-    cd /usr/local/src
-    wget http://download.osgeo.org/postgis/source/postgis-2.0.2.tar.gz
-    tar xzf postgis-2.0.2.tar.gz
-    cd postgis-2.0.2
-    ./configure --with-raster --with-topology
+#    cd /usr/local/src
+#    sudo wget http://download.osgeo.org/postgis/source/postgis-2.0.2.tar.gz
+#    sudo tar xzf postgis-2.0.2.tar.gz
+#    cd postgis-2.0.2
+#    sudo ./configure --with-raster --with-topology
 
-    # necessary in my 12.04
-    sudo apt-get install make
+#    sudo apt-get install make
 
-    make
-    make install
+#    make
+#    make install
+
+sudo apt-get install postgis postgresql-9.3-postgis-2.1
 
 Configure spatial-db tempate
 
