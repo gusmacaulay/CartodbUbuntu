@@ -140,7 +140,7 @@ Mapnik
     apt-get update
 
     # install boost (q: with suggests? --install-suggests, a: so far seems ok without)
-    sudo apt-get install libboost1.49-dev
+    sudo apt-get install libboost1.55-tools-dev
 
     # then install mapnik
     sudo apt-get install libmapnik-dev python-mapnik mapnik-utils
