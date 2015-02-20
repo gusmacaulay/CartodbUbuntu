@@ -16,7 +16,7 @@ Clone project
     git clone --recursive https://github.com/CartoDB/cartodb.git
 
 Some dependencies
-
+py
     apt-get update
     sudo apt-get install python-software-properties
     **sudo apt-get install software-properties-common**
@@ -109,14 +109,16 @@ ImageMagik
 Install Python dependencies
 
     sudo apt-get install python-setuptools
-    sudo easy_install pip
-    pip install -r cartodb/python_requirements.txt
+    sudo apt-get install python-dev
+    sudo? easy_install pip
+    sudo? pip install -r cartodb/python_requirements.txt
 
     # when python-gdal bindings fail to install using above
     sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
     sudo apt-get update
     sudo apt-get install python-gdal
 
+    # leaving this ppa in for now??
     sudo apt-add-repository --remove ppa:ubuntugis/ubuntugis-unstable
     apt-get update
 
