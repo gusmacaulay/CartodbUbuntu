@@ -187,7 +187,7 @@ Mapnik
 ### Additional pg config
 
     ## pg
-    #In /etc/postgresql/9.1/main/pg_hba.conf, set auth method to "trust":
+    #In /etc/postgresql/9.3/main/pg_hba.conf, set auth method to "trust":
     local   all             postgres                                trust
     host    all             all             127.0.0.1/32            trust
 
@@ -200,13 +200,30 @@ Mapnik
     (Set password) 
     \q
 
+### CartoDB Schema Triggers
+
+    git clone https://github.com/CartoDB/pg_schema_triggers.git && \
+      cd pg_schema_triggers && \
+      sudo make all install && \
+      sudo sed -i \
+      "/#shared_preload/a shared_preload_libraries = 'schema_triggers.so'" \
+      /etc/postgresql/9.3/main/postgresql.conf
+
+## Cartodb Postgres Extension
+
+    # version is 0.5.2 but it keeps changing ...
+    git clone --branch 0.5.2 https://github.com/CartoDB/cartodb-postgresql && \
+      cd cartodb-postgresql && \
+      PGUSER=postgres sudo make install
+    
 ### Setup (see https://github.com/CartoDB/cartodb for details)
 
     export SUBDOMAIN=carto # unset SUBDOMAIN to undo
     cd cartodb
 
-    # bundle
-    rvm use 1.9.2@cartodb --create && bundle install # from cartodb/
+    # bundle --> carto seems to require ruby 1.9.3 so installed this first
+    rvm install ruby-1.9.3
+    rvm use 1.9.3@cartodb --create && bundle install # from cartodb/
     # sudo bundle install # not needed? anyway bundle not found for sudo
 
     mv config/app_config.yml.sample config/app_config.yml
