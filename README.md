@@ -1,7 +1,7 @@
 Cartodb Ubuntu 14.04
 =============
 
-A VirtualBox CartoDB VM on Ubuntu Server 14.04 LTS
+CartoDB VM on Ubuntu Server 14.04 LTS
 based upon https://gist.githubusercontent.com/tomay/7779546/raw/5479e0be07e80b1cc5b4341c180d675afff5b427/cartodb+install+notes+12.04.md
 
 ### Cartodb install on Digital Ocean ubuntu 12.04 64-bit
@@ -67,16 +67,14 @@ PLP-PYTHON
 
 POST-GIS
 
-#    cd /usr/local/src
-#    sudo wget http://download.osgeo.org/postgis/source/postgis-2.0.2.tar.gz
-#    sudo tar xzf postgis-2.0.2.tar.gz
-#    cd postgis-2.0.2
-#    sudo ./configure --with-raster --with-topology
-
-#    sudo apt-get install make
-
-#    make
-#    make install
+    # cd /usr/local/src
+    # sudo wget http://download.osgeo.org/postgis/source/postgis-2.0.2.tar.gz
+    # sudo tar xzf postgis-2.0.2.tar.gz
+    # cd postgis-2.0.2
+    # sudo ./configure --with-raster --with-topology
+    # sudo apt-get install make
+    # make
+    # make install
 
 sudo apt-get install postgis postgresql-9.3-postgis-2.1
 
