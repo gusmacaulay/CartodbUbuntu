@@ -26,17 +26,6 @@ More dependencies
     sudo apt-get install unp
     sudo apt-get install zip
 
-Add Cartodb PPAs
-
-    sudo add-apt-repository ppa:cartodb/gis
-    sudo add-apt-repository ppa:cartodb/mapnik
-    sudo add-apt-repository ppa:cartodb/nodejs
-    sudo add-apt-repository ppa:cartodb/redis
-    
-    apt-get update
-    
-    This will complain about missing repositories - possibly doesn't matter
-
 GDAL
 
     sudo apt-get install gdal-bin libgdal1-dev
@@ -98,6 +87,7 @@ Configure spatial-db tempate
 
 Install Ruby 1.9.2 (using RVM)
 
+    sudo su
     \curl -L https://get.rvm.io | bash
     source /etc/profile.d/rvm.sh
     rvm install 1.9.2
