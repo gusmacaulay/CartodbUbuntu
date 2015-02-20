@@ -158,7 +158,7 @@ Mapnik
     git checkout master 
     npm install
 
-    mv config/environments/development.js.example config/environments/development.js
+    mv config/environments/test.js.example config/environments/test.js
 
     # run test
     export PGUSER=postgres # note see config below
