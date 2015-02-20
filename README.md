@@ -247,7 +247,8 @@ Mapnik
     bundle exec rake cartodb:db:set_user_account_type["myuser",'[DEDICATED]'] 
 
 ### Start all servers
-
+    
+    # foreman not working for me - but starting services individually is ...
     bundle exec foreman start -p 3000
     
 ### Useful miscellany
