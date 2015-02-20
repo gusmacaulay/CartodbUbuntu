@@ -65,18 +65,9 @@ PLP-PYTHON
     ***sudo apt-get install postgresql-plpython-9.1
     sudo apt-get install postgresql-plpython-9.3
 
-POST-GIS
-
-    # cd /usr/local/src
-    # sudo wget http://download.osgeo.org/postgis/source/postgis-2.0.2.tar.gz
-    # sudo tar xzf postgis-2.0.2.tar.gz
-    # cd postgis-2.0.2
-    # sudo ./configure --with-raster --with-topology
-    # sudo apt-get install make
-    # make
-    # make install
-
-sudo apt-get install postgis postgresql-9.3-postgis-2.1
+POST-GIS    
+    PostGIS 2.1 is included in 14.04
+    # sudo apt-get install postgis postgresql-9.3-postgis-2.1
 
 Configure spatial-db tempate
 
@@ -86,7 +77,7 @@ Configure spatial-db tempate
     nano /var/lib/postgresql/config_db.sh
 
     #!/usr/bin/env bash
-    POSTGIS_SQL_PATH=/usr/share/postgresql/9.1/contrib/postgis-2.0
+    POSTGIS_SQL_PATH=/usr/share/postgresql/9.3/contrib/postgis-2.1
     createdb -E UTF8 template_postgis
     createlang -d template_postgis plpgsql
     psql -d postgres -c \ "UPDATE pg_database SET datistemplate='true' WHERE datname='template_postgis'"
